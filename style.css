@@ -1,0 +1,23 @@
+/* spacing on all sections */
+#about, #services, #portfolio, #contact {
+    margin-top: 4rem;
+    padding-top: 4rem;
+}
+
+.card-header {
+    padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+    background: none;
+}
+
+/* Add a blur effect on hover */
+.image-container:hover {
+    filter: blur(5px);
+  }
+.navbar.bg-transparent {
+    background: rgba(255, 255, 255, 0.2); /* Adjust the alpha (4th value) to control transparency */
+    backdrop-filter: blur(20px); /* Adjust the blur amount as desired */
+    -webkit-backdrop-filter: blur(20px); /* For Safari compatibility */
+}

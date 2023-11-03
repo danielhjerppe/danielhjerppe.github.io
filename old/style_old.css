@@ -1,0 +1,141 @@
+@import "transitions.css";
+
+body {
+    background-color: #F7F6F2;
+}
+
+.navbar-brand {
+    font-family: "Aesthet Nova W05 Bold";
+    font-size: 34px;
+    color: #000000;
+}
+
+.portfolio {
+    font-family: "Aesthet Nova W05 Bold";
+}
+
+/* hero background image */
+.bgimage {
+    height:30vh;
+    background: url('images/drums.JPG');
+    background-size:cover;
+    position:relative;
+}
+.bgimage:after {
+    animation: grain 8s steps(10) infinite;
+    background-image: url("images/noise-light.png");
+    content: "";
+    height: 300%;
+    left: -50%;
+    opacity: 0.3;
+    position: fixed;
+    top: -100%;
+    width: 300%;
+  }
+
+/* text css above hero image
+.hero_title {
+    font-size: 4.5rem;
+}
+.hero_desc {
+    font-size: 2rem;
+}
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}*/
+
+/* about section image css */
+.imageAboutPage {
+    width: 100%;
+}
+
+/* services section css 
+.servicesText.card {
+    height: 280px;
+    cursor: pointer;
+  }
+.servicesIcon {
+    font-size: 36px;
+    text-align: center;
+    width: 100%;
+}
+.card-title {
+    text-align: center;
+}
+.card:hover .servicesIcon {
+    color: #008000;
+}
+.servicesText:hover {
+    border: 1px solid #008000;
+}*/
+
+/* display background color black on navbar scroll */
+.navbar {
+    /*background: linear-gradient(blue, pink);*/
+    /*background: linear-gradient(to top, transparent, 0.00001%, #F7F6F2);*/
+    background-color: #F7F6F2;
+}
+
+/* .navbarScroll.navbarDark {
+    background-color: #F7F6F2;
+    opacity: 0;
+    
+    /*opacity: 0.2;*/
+/*} 
+
+
+/* social media icons styling */
+.social-icons {
+    font-size: 36px;
+    cursor: pointer;
+}
+.fa-facebook:hover,.fa-instagram:hover,.fa-twitter:hover,.fa-linkedin:hover, .fa-twitch:hover {
+    color: #008000;
+}
+.fab {
+    color: #000000;
+}
+
+/* footer styling */
+#footer {
+    background-color: #808080;
+    text-align: center;
+}
+
+/* spacing on all sections */
+#about, #services, #portfolio, #contact {
+    margin-top: 4rem;
+    padding-top: 4rem;
+}
+#contact {
+    padding-bottom: 4rem;
+}
+
+/* Custom styles for card title */
+.card-title {
+    /*font-family: "Aesthet Nova W05 Bold";*/
+    text-align: justify;
+    font-size: 20px; }/* Adjust the font size as needed */
+/*    color: #FF5733; /* Adjust the text color as needed */
+/*}*/
+
+.card {
+    background-color: #F7F6F2;
+}
+.card-footer {
+    background-color: #F7F6F2;
+}
+.card-header {
+    background-color: #F7F6F2;
+}
+
+.btn:hover {opacity: 1}
+
+.hidden {
+    display: none;
+}
