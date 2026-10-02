@@ -40,14 +40,17 @@ a.l:hover{color:var(--hover,var(--accent));text-decoration-color:var(--hover,var
 .bar{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:20px;margin-bottom:32px}
 .bar h2{font-family:"Newsreader",Georgia,serif;font-weight:400;font-size:clamp(28px,3.4vw,40px);line-height:1}
 .brand{font-family:"Homemade Apple","Segoe Script",cursive;font-size:32px;line-height:1;display:inline-block;transform:rotate(-2deg);position:relative;top:14px;margin-block:-12px;text-shadow:0 0 10px var(--bg);transition:color .45s ease-in-out}
-@media (max-width:480px){.brand{font-size:24px;top:10px;margin-block:-9px}}
+@media (max-width:480px){.brand{font-size:21px;line-height:1.15;width:min-content;flex:none;top:0;margin-block:-16px}header nav{gap:14px!important}}
 .filters{display:flex;gap:6px;flex-wrap:wrap}
 .filters button{font:inherit;font-size:13.5px;background:none;color:var(--mute);border:1px solid var(--line);border-radius:99px;padding:4px 14px;cursor:pointer;transition:color .45s ease-in-out,border-color .45s ease-in-out,background-color .45s ease-in-out}
 .filters button:hover{color:var(--hover,var(--ink));border-color:var(--hover,var(--mute))}
 .filters button[aria-pressed="true"]:hover{color:#fff;border-color:var(--active,var(--ink))}
 .filters button[aria-pressed="true"]{background:var(--active,var(--ink));color:#fff;border-color:var(--active,var(--ink))}
 .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(32px,4vw,56px) clamp(16px,2.5vw,32px);padding-bottom:96px}
-.item{all:unset;display:block;cursor:pointer;box-sizing:border-box}
+.item{all:unset;display:block;align-self:start;width:100%;min-width:0;max-width:100%;text-align:left;cursor:pointer;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+.item .cover{width:100%}
+.item .t,.item .a{overflow-wrap:anywhere}
+body{-webkit-text-size-adjust:100%}
 .item:focus-visible,.filters button:focus-visible,a:focus-visible,.x:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 .cover{aspect-ratio:1;overflow:hidden;background:var(--line);border-radius:10px}
 .cover svg,.cover img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
@@ -57,8 +60,9 @@ a.l:hover{color:var(--hover,var(--accent));text-decoration-color:var(--hover,var
 em{font-style:italic}
 .a{font-family:"Newsreader",Georgia,serif;font-style:italic;color:var(--mute);font-size:15.5px;margin-top:1px}
 .y{color:var(--mute);font-size:13.5px;font-variant-numeric:tabular-nums}
-.roles{display:flex;flex-wrap:wrap;gap:2px 10px;margin-top:6px;font-size:13px;color:var(--accent)}
-.roles span:not(:first-child)::before{content:"/";margin-right:10px;color:var(--line)}
+.roles{display:block;margin-top:6px;font-size:13px;line-height:1.5;color:var(--accent)}
+.roles span:not(:last-child)::after{content:"/";margin:0 .55em;color:var(--mute);opacity:.5}
+.roles span{white-space:nowrap}
 footer{border-top:1px solid var(--line);padding:22px 0 40px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:14px;color:var(--mute)}
 dialog{border:0;padding:0;background:var(--bg);color:var(--ink);width:min(900px,94vw);max-height:92vh;overflow:auto;margin:auto;border-radius:16px}
 dialog::backdrop{background:rgba(0,0,0,.6);backdrop-filter:blur(6px)}
@@ -81,7 +85,7 @@ dialog[open]{animation:pop .35s ease}
 </style>
 </head>
 <body>
-<header><div class="wrap"><a class="lname brand" href="#top">Daniel Hjerppe</a><nav style="display:flex;gap:22px"><a href="#work">Work</a><a href="#"></a><a class="mail" href="#">Contact</a><button class="theme" type="button" aria-label="Switch colour theme"></button></nav></div></header>
+<header><div class="wrap"><a class="lname brand" href="#top">Daniel Hjerppe</a><nav style="display:flex;gap:22px"><a href="#work">Work</a><a href="#">Photography</a><a class="mail" href="#">Contact</a><button class="theme" type="button" aria-label="Switch colour theme"></button></nav></div></header>
 <div class="wrap">
 <!-- <h1 id="top">Daniel Hjerppe</h1> -->
 
@@ -185,7 +189,7 @@ function art(i){
 }
 const cover=(w,i)=>w.img?`<img src="${w.img}" alt="${w.title} cover">`:art(i);
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-const rolesHtml=w=>`<div class="roles">${w.roles.map(r=>`<span>${esc(r)}</span>`).join("")}</div>`;
+const rolesHtml=w=>`<div class="roles">${w.roles.map(r=>`<span>${esc(r)}</span>`).join(" ")}</div>`;
 const grid=document.getElementById("grid"),dlg=document.getElementById("dlg"),fl=document.getElementById("filters");
 let cur="All";
 
