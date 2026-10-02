@@ -34,7 +34,7 @@ h1{font-family:"Newsreader",Georgia,serif;font-weight:400;font-size:clamp(44px,7
 .about p.sub{margin-top:14px;color:var(--mute);max-width:33em;font-size:15px}
 .about .links{margin-top:14px;display:flex;gap:22px;flex-wrap:wrap;font-size:15px}
 a.l{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:5px;transition:color .25s ease-in-out,text-decoration-color .45s ease-in-out}
-a.lname{color:var(--ink);text-decoration:none;text-decoration-color:var(--line);text-underline-offset:5px;transition:color .25s ease-in-out,text-decoration-color .45s ease-in-out}
+a.lname{color:var(--brand,var(--ink));text-decoration:none;text-decoration-color:var(--line);text-underline-offset:5px;transition:color .25s ease-in-out,text-decoration-color .45s ease-in-out}
 a.lname:hover{color:var(--hover,var(--accent))}
 a.l:hover{color:var(--hover,var(--accent));text-decoration-color:var(--hover,var(--accent))}
 .bar{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:20px;margin-bottom:32px}
@@ -176,6 +176,13 @@ const pick=el=>el.style.setProperty("--hover",rnd());
 const T="a.l,a.lname,.filters button";
 document.addEventListener("mouseover",e=>{const el=e.target.closest(T);if(el&&!el.contains(e.relatedTarget))pick(el)});
 document.addEventListener("focusin",e=>{const el=e.target.closest(T);if(el)pick(el)});
+
+/* Name in the top bar: random palette colour on every load */
+const brandEl=document.querySelector(".brand"),bi=Math.floor(Math.random()*PAL.light.length);
+const paintBrand=()=>{const c=PAL[now()][bi];brandEl.style.setProperty("--brand",c);lastC=c};
+paintBrand();
+const _t=tb.onclick;tb.onclick=()=>{_t();paintBrand()};
+mq.addEventListener("change",paintBrand);
 document.querySelectorAll(".mail").forEach(a=>{const m=MAIL_USER+"@"+MAIL_DOMAIN;a.href="mailto:"+m;if(a.hasAttribute("data-show"))a.textContent=m});
 
 const P=[["#2a3cff","#f4f5f6","#000"],["#ff5a36","#000","#f4f5f6"],["#e8e8e3","#2a3cff","#000"],["#000","#f4f5f6","#ff5a36"],["#1c7a5a","#f4f5f6","#000"],["#f2c230","#000","#2a3cff"]];
