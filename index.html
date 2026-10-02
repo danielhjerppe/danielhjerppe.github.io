@@ -1,864 +1,225 @@
-<!doctype html>
-<html lang="en" data-bs-theme="auto">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Daniel Hjerppe. Drummer, audio engineer & animator. A portfolio including selected discography & videography.">
-    <meta name="author" content="Daniel Hjerppe">
-    <meta name="keywords" content="Daniel Hjerppe, drums, rummut, Vasa, Vaasa, Finland, Suomi">
-    <script src="script/script.js"></script>
-    <!-- Add meta content?-->
-    <title>Daniel Hjerppe</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <!--NAVIGATION START-->
-    <nav class="navbar navbar-expand-lg fixed-top bg-transparent"> <!--bg-body-tertiary-->
-        <div class="container">
-            <!-- Logo and Brand -->
-            <a class="navbar-brand fw-bold" href="#">Daniel Hjerppe.</a>
-            
-        
-            <!-- Navigation Items on the Right -->
-            <ul class="navbar-nav justify-content-end flex-row">
-                <li class="nav-item">
-                    <a class="nav-link pe-4" href="#">Home</a>
-                  </li>
-                  <li class="nav-item pe-4 m-auto">
-                    <div class="vr"></div>
-                  </li>
-              <li class="nav-item form-check form-switch m-auto">
-                <input class="form-check-input" type="checkbox" data-bs-toggle="collapse" data-bs-target="#album" role="switch" id="flexSwitchCheckChecked" checked>
-                <label class="form-check-labe pe-4" for="flexSwitchCheckChecked">Albums</label>
-              </li>
-              <li class="nav-item form-check form-switch m-auto">
-                <input class="form-check-input" type="checkbox" data-bs-toggle="collapse" data-bs-target="#single" role="switch" id="flexSwitchCheckChecked" checked>
-                <label class="form-check-label pe-4" for="flexSwitchCheckChecked">Singles</label>
-              </li>
-              <li class="nav-item form-check form-switch m-auto">
-                <input class="form-check-input" type="checkbox" data-bs-toggle="collapse" data-bs-target="#video" role="switch" id="flexSwitchCheckChecked" checked>
-                <label class="form-check-label" for="flexSwitchCheckChecked">Videos</label>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      <!--NAVIGATION END-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Daniel Hjerppe. Mostly a drummer, sometimes a producer, animator and graphic designer — and a mechanical engineer by day. Selected work and credits.">
+<title>Daniel Hjerppe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300..600&family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..500&family=Homemade+Apple&display=swap" rel="stylesheet">
+<script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<style>
+:root{--bg:#f6f6f4;--ink:#1a1a1a;--mute:#74746f;--line:#dcdcd7;--accent:#3d4bd6;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121213;--ink:#ececea;--mute:#8e8e89;--line:#2a2a2c;--accent:#8c96ff}}
+:root[data-theme="dark"]{--bg:#121213;--ink:#ececea;--mute:#8e8e89;--line:#2a2a2c;--accent:#8c96ff}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px)}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--ink);font-family:"DM Sans",Helvetica,Arial,sans-serif;font-weight:400;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.07;
+background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(20px,4vw,48px)}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--bg) 78%,transparent);-webkit-backdrop-filter:blur(14px) saturate(1.4);backdrop-filter:blur(14px) saturate(1.4);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:15px;padding-bottom:15px;font-size:14px}
+header a{color:inherit;text-decoration:none}
+header a:hover,.theme:hover{color:var(--accent)}
+.theme{font:inherit;background:none;border:0;color:inherit;cursor:pointer;padding:0}
+.theme:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+h1{font-family:"Newsreader",Georgia,serif;font-weight:400;font-size:clamp(44px,7vw,88px);font-weight:300;line-height:.98;letter-spacing:-.03em;margin:clamp(28px,4vw,48px) 0 0 -.02em;animation:rise 1s ease both}
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.about{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:clamp(20px,4vw,56px);padding:clamp(100px,3vw,36px) 0 clamp(36px,5vw,56px);align-items:start}
+.portrait{justify-self:end;width:100%;aspect-ratio:4/5;max-width:260px;background:var(--line);display:grid;place-items:center;color:var(--mute);font-size:14px;overflow:hidden;border-radius:14px}
+.portrait img{width:100%;height:100%;object-fit:cover}
+.about p.lead{font-family:"Newsreader",Georgia,serif;font-size:clamp(21px,2.4vw,28px);line-height:1.25;letter-spacing:-.005em;max-width:21em}
+.about p.sub{margin-top:14px;color:var(--mute);max-width:33em;font-size:15px}
+.about .links{margin-top:14px;display:flex;gap:22px;flex-wrap:wrap;font-size:15px}
+a.l{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:5px;transition:color .25s ease-in-out,text-decoration-color .45s ease-in-out}
+a.lname{color:var(--ink);text-decoration:none;text-decoration-color:var(--line);text-underline-offset:5px;transition:color .25s ease-in-out,text-decoration-color .45s ease-in-out}
+a.lname:hover{color:var(--hover,var(--accent))}
+a.l:hover{color:var(--hover,var(--accent));text-decoration-color:var(--hover,var(--accent))}
+.bar{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:20px;margin-bottom:32px}
+.bar h2{font-family:"Newsreader",Georgia,serif;font-weight:400;font-size:clamp(28px,3.4vw,40px);line-height:1}
+.brand{font-family:"Homemade Apple","Segoe Script",cursive;font-size:32px;line-height:1;display:inline-block;transform:rotate(-2deg);position:relative;top:14px;margin-block:-12px;text-shadow:0 0 10px var(--bg);transition:color .45s ease-in-out}
+@media (max-width:480px){.brand{font-size:24px;top:10px;margin-block:-9px}}
+.filters{display:flex;gap:6px;flex-wrap:wrap}
+.filters button{font:inherit;font-size:13.5px;background:none;color:var(--mute);border:1px solid var(--line);border-radius:99px;padding:4px 14px;cursor:pointer;transition:color .45s ease-in-out,border-color .45s ease-in-out,background-color .45s ease-in-out}
+.filters button:hover{color:var(--hover,var(--ink));border-color:var(--hover,var(--mute))}
+.filters button[aria-pressed="true"]:hover{color:#fff;border-color:var(--active,var(--ink))}
+.filters button[aria-pressed="true"]{background:var(--active,var(--ink));color:#fff;border-color:var(--active,var(--ink))}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(32px,4vw,56px) clamp(16px,2.5vw,32px);padding-bottom:96px}
+.item{all:unset;display:block;cursor:pointer;box-sizing:border-box}
+.item:focus-visible,.filters button:focus-visible,a:focus-visible,.x:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.cover{aspect-ratio:1;overflow:hidden;background:var(--line);border-radius:10px}
+.cover svg,.cover img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.item:hover .cover svg,.item:hover .cover img{transform:scale(1.03)}
+.meta{display:flex;justify-content:space-between;gap:12px;margin-top:14px;align-items:baseline}
+.t{font-family:"Newsreader",Georgia,serif;font-size:21px;line-height:1.2}
+em{font-style:italic}
+.a{font-family:"Newsreader",Georgia,serif;font-style:italic;color:var(--mute);font-size:15.5px;margin-top:1px}
+.y{color:var(--mute);font-size:13.5px;font-variant-numeric:tabular-nums}
+.roles{display:flex;flex-wrap:wrap;gap:2px 10px;margin-top:6px;font-size:13px;color:var(--accent)}
+.roles span:not(:first-child)::before{content:"/";margin-right:10px;color:var(--line)}
+footer{border-top:1px solid var(--line);padding:22px 0 40px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:14px;color:var(--mute)}
+dialog{border:0;padding:0;background:var(--bg);color:var(--ink);width:min(900px,94vw);max-height:92vh;overflow:auto;margin:auto;border-radius:16px}
+dialog::backdrop{background:rgba(0,0,0,.6);backdrop-filter:blur(6px)}
+dialog[open]{animation:pop .35s ease}
+@keyframes pop{from{opacity:0;transform:scale(.97)}to{opacity:1;transform:none}}
+.dl{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr)}
+.dl .cover{border-radius:0}
+.info{padding:clamp(22px,3vw,36px);display:flex;flex-direction:column;gap:10px;position:relative}
+.info .t{font-size:clamp(30px,3.6vw,42px);line-height:1.05;margin-top:30px}
+.info .a{font-size:16px}
+.info .roles{font-size:14px}
+.note{font-family:"Newsreader",Georgia,serif;font-style:italic;font-size:18px;line-height:1.4;color:var(--mute);margin-top:8px}
+.btn{display:inline-block;margin-top:auto;border:1px solid var(--ink);color:var(--ink);font-size:15px;text-decoration:none;padding:11px 22px;text-align:center;border-radius:99px;transition:all .2s}
+.btn:hover{background:var(--ink);color:var(--bg)}
+.x{position:absolute;top:14px;right:16px;font:inherit;font-size:14px;background:none;color:var(--mute);border:0;cursor:pointer;padding:6px}
+.x:hover{color:var(--ink)}
+@media (max-width:860px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.about{grid-template-columns:1fr}.portrait{max-width:220px;order:-1;justify-self:start}.dl{grid-template-columns:1fr}}
+@media (max-width:480px){.t{font-size:18px}.meta{flex-direction:column;gap:2px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a class="lname brand" href="#top">Daniel Hjerppe</a><nav style="display:flex;gap:22px"><a href="#work">Work</a><a href="#"></a><a class="mail" href="#">Contact</a><button class="theme" type="button" aria-label="Switch colour theme"></button></nav></div></header>
+<div class="wrap">
+<!-- <h1 id="top">Daniel Hjerppe</h1> -->
 
-      <!--PORTFOLIO START-->
-      <section id="portfolio">
-        
-        <div class="container mt-3">
-            <h1 class="text-center">Portfolio</h1>
+<section class="about">
+  <div>
+    <p class="lead">“I'm mostly a <a href="#work" class="l role-link" data-role="Drums">drummer</a>. When I'm not behind a kit, I <a href="#work" class="l role-link" data-role="Recording">record</a>, <a href="#work" class="l role-link" data-role="Mixing">mix</a> and <a href="#work" class="l role-link" data-role="Production">produce</a> music — <a href="#work" class="l role-link" data-role="Animation">animate</a> things that  shouldn't move, and take photographs of things that should. Occasionally there's some light <a href="#work" class="l role-link" data-role="Graphic Design">graphic design</a>, too. <br>By day, I'm a mechanical engineer.”</p>
+    <p class="sub">Based in Vaasa, Finland, from where I keep time with <a class="l" target="_blank" href="https://www.wentusbluesband.com">Wentus Blues Band</a> and Kuusikoski to name a few.</p>
+    <div class="links"><a class="l mail" data-show href="#"></a><a class="l" target="_blank" href="https://www.linkedin.com/in/danielhjerppe/">LinkedIn</a><a class="l" target="_blank" href="http://www.youtube.com/@DanielHjerppe">YouTube</a></div>
+  </div>
+  <div class="portrait" id="portrait">Add your photo</div>
+</section>
 
-        
-        <div class="row">
-            <!--PLACE CARDS HERE-->
-            <div class="col-6 col-lg-3 mt-4 collapse show multi-collapse" id="album">
-                <div class="card element border-0">
-                  <div class="card-header"> 
-                    <div class="row">
-                        <div class="col-6">2022</div>
-                    </div> 
-                
-                    </div>
-                    <img class="card-img-top shadow-sm" src="images/ina_forsman_-_all_there_is.jpeg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h5 class="card-title text-lg-start fw-bold mb-1">Ina Forsman</h5>
-                        <h5 class="card-subtitle mb-2 text-body-secondary fst-italic">All There Is</h5>
-                        <span class="badge text-bg-primary">Drums</span>
-                        <span class="badge text-bg-primary"></span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-warning"></span>
-                        <span class="badge text-bg-warning"></span>
-                    </div>
-                </div>
-            </div>
+<section id="work">
+  <div class="bar"><h2>Selected work</h2><div class="filters" id="filters" role="group" aria-label="Filter by role"></div></div>
+  <div class="grid" id="grid"></div>
+</section>
 
-            <div class="col-6 col-lg-3 mt-4 collapse show multi-collapse" id="single">
-                <div class="card element border-0">
-                  <div class="card-header"> 
-                    <div class="row">
-                        <div class="col-6">2021</div>
-                        
-                    </div> 
-                
-                    </div>
-                    <!--<img class="card-img-top shadow-sm" src="images/pepe_deluxe_-_phantom_cabinet_vol_1.jpeg" alt="Card image" style="width:100%">-->
-                    <iframe class="card-img-top" style="border-radius:12px" src="https://open.spotify.com/embed/track/1M2rhpEyhSaIok4Ho9hJqn?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                    <div class="card-body">
-                        <h5 class="card-title text-lg-start fw-bold mb-1">Pepe Deluxé</h5>
-                        <h5 class="card-subtitle mb-2 text-body-secondary fst-italic">22nd Century Dandy</h5>
-                        <span class="badge text-bg-primary">Drums</span>
-                        <span class="badge text-bg-primary"></span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-warning"></span>
-                        <span class="badge text-bg-warning"></span>
-                    </div>
-                </div>
-            </div>
+<footer><span>Made by Daniel Hjerppe, 2026. Thanks Claude!</span><span style="font-family:Newsreader,Georgia,serif;font-style:italic;font-size:15.5px">"The best drums are the ones you don't have to haul yourself."</span></footer>
+</div>
 
-            <div class="col-6 col-lg-3 mt-4 collapse show multi-collapse" id="single">
-                <div class="card element border-0">
-                  <div class="card-header"> 
-                    <div class="row">
-                        <div class="col-6">2020</div>
-                    </div> 
-                
-                    </div>
-                    <!--<img class="card-img-top shadow-sm" src="images/animor_-_wild_dog.jpeg" alt="Card image" style="width:100%">-->
-                    <iframe class="card-img-top" style="border-radius:12px" src="https://open.spotify.com/embed/track/0AyvFtRS84DPOmibQPCysg?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                    <div class="card-body">
-                        <h5 class="card-title text-lg-start fw-bold mb-1">Animor</h5>
-                        <h5 class="card-subtitle mb-2 text-body-secondary fst-italic">Wild Dog</h5>
-                        <span class="badge text-bg-primary">Drums</span>
-                        <span class="badge text-bg-primary">Percussion</span>
-                        <span class="badge text-bg-primary">Bass</span>
-                        <span class="badge text-bg-primary">Philicorda</span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-warning"></span>
-                        <span class="badge text-bg-warning"></span>
-                    </div>
-                </div>
-            </div>
+<dialog id="dlg" aria-label="Album details"></dialog>
 
-            <div class="col-6 col-lg-3 mt-4 collapse show multi-collapse" id="album">
-                <div class="card element border-0">
-                  <div class="card-header"> 
-                    <div class="row">
-                        <div class="col-6">2020</div>
-                    </div> 
-                
-                    </div>
-                    <img class="card-img-top shadow-sm" src="images/opus_symbiosis_-_fata_morgana.jpeg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h5 class="card-title text-lg-start fw-bold mb-1">Opus Symbiosis</h5>
-                        <h5 class="card-subtitle mb-2 text-body-secondary fst-italic">Fata Morgana</h5>
-                        <span class="badge text-bg-primary">Drums</span>
-                        <span class="badge text-bg-primary"></span>
-                        <span class="badge text-bg-success">Mixing</span>
-                        <span class="badge text-bg-success">Producing</span>
-                        <span class="badge text-bg-warning">Cover Layout</span>
-                        <span class="badge text-bg-warning"></span>
-                    </div>
-                </div>
-            </div>
+<script>
+/* ---- EDIT YOUR WORK HERE ----
+   roles: any of "Drums", "Production", "Mixing" (or add your own, e.g. "Mastering")
+   playlist: link to Spotify / Bandcamp / YouTube etc. (leave "" to hide the button)
+   img: optional cover image as a data: URI. Without it, a generated placeholder is shown. */
+const WORK=[
+ {artist:"Kuusikoski feat. SIRÉN",title:"Hall of Fame",year:2026,roles:["Drums","Mixing","Graphic Design"],playlist:"",img:"images/kuusikoski_halloffame.jpg", btnLabel:"",note:""},
+ {artist:"Wentusfest 2026",title:"Logo & T-shirts",year:2026,roles:["Graphic Design"],playlist:"",img:"images/wentusfest_tshirt.png", btnLabel:"",note:""},
+ {artist:"Zacharias Holmkvist Quartet",title:"Up Ahead",year:2024,roles:["Recording","Mixing"],playlist:"",img:"images/zacharias_up_ahead.jpeg", btnLabel:"",note:""},
+ {artist:"Ina Forsman",title:"All There Is",year:2022,roles:["Drums"],playlist:"#",img:"images/ina_forsman_-_all_there_is.jpeg",note:"Produced by my old friend Michael Bleu. It was tracked on a rainy afternoon at his studio in Helsinki."},
+ {artist:"Pepe Deluxé",title:"22nd Century Dandy",year:2021,roles:["Drums"],playlist:"#",img:"images/pepe_deluxe_-_phantom_cabinet_vol_1.jpeg", note:"I've always been a fan of Pepe Deluxé. It was a real honour to work with them on a few songs."},
+ {artist:"Animor",title:"Wild Dog",year:2020,roles:["Drums","Production"],playlist:"",img:"images/animor_-_wild_dog.jpeg",note:"This track is maybe the one I'm the most proud of. I play almost every instrument on this track. Really dig the vibe and Animor's vocals on this one."},
+ {artist:"Opus Symbiosis",title:"Fata Morgana",year:2020,roles:["Drums","Production","Recording","Mixing","Graphic Design"],playlist:"#",img:"images/opus_symbiosis_-_fata_morgana.jpeg"},
+ {artist:"Michael Bleu",title:"Voodoo",year:2020,roles:["Drums"],playlist:"#",img:"images/michael_bleu_-_voodoo.jpeg"},
+ {artist:"Kinaret",title:"Hahmo",year:2020,roles:["Drums","Mixing","Production","Recording","Graphic Design"],playlist:"",img:"images/kinaret_-_hahmo.jpeg"},
+ {artist:"Tove H",title:"EP",year:2019,roles:["Production"],playlist:"",img:"images/tove_h_-_ep.jpeg"},
+ {artist:"Wentus Blues Band with Duke Robillard",title:"Too Much Mustard!",year:2019,roles:["Drums","Graphic Design"],playlist:"",img:"images/wentus_blues_band_duke_robillard_-_too_much_mustard.jpeg"},
+ {artist:"Michael Bleu feat. Nalia",title:"Hidas Biisi",year:2019,roles:["Drums"],playlist:"",img:"images/michael_bleu_nalia_-_hidas_biisi.jpeg"},
+ {artist:"Fredrik Furu",title:"Det som alla letar efter",year:2019,roles:["Animation"],playlist:"#",btnLabel:"Watch on Youtube!",img:"images/fredrik_furu_-_det_som_alla_letar_efter.jpg"},
+ {artist:"Wentus Blues Band",title:"Yuletide",year:2018,roles:["Drums","Recording","Mixing"],playlist:"",img:"images/wentus_blues_band_-_yuletide.jpeg"},
+ {artist:"Animor",title:"Somebody Loves You",year:2018,roles:["Drums"],playlist:"",img:"images/animor_-_somebody_loves_you.jpeg",note:"The first song I did with Animor. Love the vibe."},
+ {artist:"Kepa Härkönen",title:"Spicy Tales & Spacey Tones",year:2018,roles:["Drums","Recording","Mixing", "Graphic Design"],playlist:"",img:"images/kepa_harkonen_-_spicy_tales_spacey_tones.jpeg", btnLabel:"",note:""},
+ {artist:"Wentus Blues Band",title:"Throwback",year:2018,roles:["Drums","Recording","Mixing"],playlist:"",img:"images/wentus_blues_band_-_throwback.jpeg", btnLabel:"",note:""},
+ {artist:"Sorry Babe",title:"Stupid Girl",year:2018,roles:["Drums"],playlist:"",img:"images/sorry_babe_-_stupid_girl.jpeg", btnLabel:"",note:"Produced by Michael Bleu. Drums recorded at my old studio Vasklot Ljudservering."},
+ {artist:"Fredrik Furu",title:"Dum dum dum",year:2018,roles:["Animation"],playlist:"",img:"images/fredrik_furu_-_dum_dum_dum.jpg", btnLabel:"Watch",note:""},
+ {artist:"Kinaret",title:"Himanka",year:2017,roles:["Drums","Recording","Mixing"],playlist:"",img:"images/kinaret_-_himanka.jpeg", btnLabel:"",note:""},
+ {artist:"The Napkins",title:"Genuine",year:2017,roles:["Drums","Recording","Mixing","Production","Graphic Design"],playlist:"",img:"images/the_napkins_-_genuine.jpeg", btnLabel:"",note:"The first record I recorded and produced at my old studio Vasklot Ljudservering. Writing credits on some of the songs."},
+ {artist:"Hilanders",title:"En mä jaksaiskaan pettyä enää",year:2017,roles:["Animation"],playlist:"",img:"images/hilanders_-_en_ma_jaksaiskaan.jpg", btnLabel:"",note:""},
+ {artist:"LYSA",title:"Ribs",year:2017,roles:["Drums","Animation"],playlist:"",img:"images/lysa_-_ribs.jpg", btnLabel:"",note:""},
+ {artist:"Thoby Loth",title:"Skymningsdalen",year:2017,roles:["Drums"],playlist:"",img:"images/thoby_loth_-_skymningsdalen.jpeg", btnLabel:"",note:""},
+ {artist:"Various Artists",title:"Dylan suomeksi",year:2016,roles:["Drums"],playlist:"",img:"images/va_-_dylan_suomeksi.jpeg", btnLabel:"",note:""},
+ {artist:"Wentus Blues Band",title:"Lucky Strike Mama",year:2016,roles:["Drums"],playlist:"",img:"images/wentus_blues_band_-_lucky_strike_mama.jpeg", btnLabel:"",note:""},
+ {artist:"The Heartbeat Band",title:"Pills",year:2016,roles:["Animation"],playlist:"",img:"images/the_heartbeat_band_-_pills.jpg", btnLabel:"",note:""},
+ {artist:"Paleface / WBB",title:"Kuoleman kauppiaat",year:2016,roles:["Drums","Animation"],playlist:"",img:"images/paleface_-_kuoleman_kauppiaat.jpg", btnLabel:"",note:""},
+ {artist:"Månskensbonden",title:"Döpt i Kyrö Älv",year:2015,roles:["Drums","Animation"],playlist:"",img:"images/manskensbonden_-_dopt_i_kyro_alv_single.jpeg", btnLabel:"",note:""},
+ {artist:"Burn the Witches",title:"Burn the Witches",year:2015,roles:["Drums","Animation"],playlist:"",img:"images/burn_the_witches_-_burn_the_witches.jpg", btnLabel:"",note:""},
+ {artist:"Stilla",title:"Hela havet stormar",year:2012,roles:["Drums"],playlist:"",img:"images/stilla_-_hela_havet_stormar.jpg", btnLabel:"",note:""},
+ {artist:"Thoby Loth",title:"Cauldron of Life",year:2012,roles:["Drums"],playlist:"",img:"images/thoby_loth_-_cauldron_of_life.jpg", btnLabel:"",note:""},
+ {artist:"Stilla",title:"Stilla",year:2011,roles:["Drums","Graphic Design"],playlist:"",img:"images/stilla_-_stilla.jpg", btnLabel:"",note:""},
+ {artist:"Thoby Loth",title:"Lägereldarnas tid",year:2009,roles:["Drums"],playlist:"",img:"images/thoby_loth_-_lagereldarnas_tid.jpg", btnLabel:"",note:""},
 
-            <div class="col-6 col-lg-3 mt-4 collapse show multi-collapse" id="single">
-                <div class="card element border-0">
-                  <div class="card-header"> 
-                    <div class="row">
-                        <div class="col-6">2020</div>
-                    </div> 
-                
-                    </div>
-                    <img class="card-img-top shadow-sm" src="images/michael_bleu_-_voodoo.jpeg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h5 class="card-title text-lg-start fw-bold mb-1">Michael Bleu</h5>
-                        <h5 class="card-subtitle mb-2 text-body-secondary fst-italic">Voodoo</h5>
-                        <span class="badge text-bg-primary">Drums</span>
-                        <span class="badge text-bg-primary">Grand Piano</span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-warning"></span>
-                        <span class="badge text-bg-warning"></span>
-                    </div>
-                </div>
-            </div>
+ {artist:"Template",title:"Template",year:2000,roles:["Drums","Mixing"],playlist:"",img:"", btnLabel:"",note:""},
 
-            
+];
+const PORTRAIT="images/me_zoom.jpg"; /* data: URI of your photo */
+/* Email, split in two so it is not written out in the page source. Edit both parts. */
+const MAIL_USER="hello",MAIL_DOMAIN="danielhjerppe.com";
+const root=document.documentElement,tb=document.querySelector(".theme"),mq=matchMedia("(prefers-color-scheme: dark)");
+const now=()=>root.dataset.theme||(mq.matches?"dark":"light");
+const label = () => {
+  tb.textContent = now() === "dark" ? "\u2600" : "\u263E";
+};
+tb.onclick=()=>{const n=now()=="dark"?"light":"dark";root.dataset.theme=n;try{localStorage.setItem("theme",n)}catch(e){}label()};
+mq.onchange=label;label();
+const PAL={
+  light:["#3d4bd6","#b5543c","#4f7a5a","#8a5a86","#b07d1f"], // blue, terracotta, sage, plum, ochre
+  dark:["#8c96ff","#e08a6f","#8fbf97","#c79bc2","#e0b85c"]
+};
+let lastC;
+const rnd=()=>{
+  const p=PAL[now()];let c;
+  do{c=p[Math.floor(Math.random()*p.length)]}while(c===lastC);
+  return lastC=c;
+};
+const pick=el=>el.style.setProperty("--hover",rnd());
+const T="a.l,a.lname,.filters button";
+document.addEventListener("mouseover",e=>{const el=e.target.closest(T);if(el&&!el.contains(e.relatedTarget))pick(el)});
+document.addEventListener("focusin",e=>{const el=e.target.closest(T);if(el)pick(el)});
+document.querySelectorAll(".mail").forEach(a=>{const m=MAIL_USER+"@"+MAIL_DOMAIN;a.href="mailto:"+m;if(a.hasAttribute("data-show"))a.textContent=m});
 
-            <div class="col-6 col-lg-3 mt-4 collapse show multi-collapse" id="album">
-                <div class="card element border-0">
-                  <div class="card-header"> 
-                    <div class="row">
-                        <div class="col-6">2020</div>
-                    </div> 
-                
-                    </div>
-                    <img class="card-img-top shadow-sm" src="images/kinaret_-_hahmo.jpeg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h5 class="card-title text-lg-start fw-bold mb-1">Kinaret</h5>
-                        <h5 class="card-subtitle mb-2 text-body-secondary fst-italic">Hahmo</h5>
-                        <span class="badge text-bg-primary">Drums</span>
-                        <span class="badge text-bg-primary">Simmons Drums</span>
-                        <span class="badge text-bg-success">Mixing</span>
-                        <span class="badge text-bg-success">Producing</span>
-                        <span class="badge text-bg-warning">Cover Layout</span>
-                        <span class="badge text-bg-warning"></span>
-                    </div>
-                </div>
-            </div>
+const P=[["#2a3cff","#f4f5f6","#000"],["#ff5a36","#000","#f4f5f6"],["#e8e8e3","#2a3cff","#000"],["#000","#f4f5f6","#ff5a36"],["#1c7a5a","#f4f5f6","#000"],["#f2c230","#000","#2a3cff"]];
+function art(i){
+ const p=P[i%P.length],k=i%4;let s=`<rect width="100" height="100" fill="${p[0]}"/>`;
+ if(k==0)s+=`<circle cx="50" cy="50" r="30" fill="${p[1]}"/><circle cx="50" cy="50" r="12" fill="${p[2]}"/>`;
+ if(k==1)s+=`<rect x="0" y="58" width="100" height="42" fill="${p[1]}"/><circle cx="50" cy="58" r="26" fill="${p[2]}"/>`;
+ if(k==2)for(let n=0;n<5;n++)s+=`<rect x="${12+n*16}" y="${20+(n%2)*14}" width="9" height="${60-(n%2)*14}" fill="${n%2?p[1]:p[2]}"/>`;
+ if(k==3)s+=`<path d="M0 100 A100 100 0 0 1 100 0 L100 100Z" fill="${p[1]}"/><circle cx="30" cy="30" r="14" fill="${p[2]}"/>`;
+ return `<svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" aria-hidden="true">${s}</svg>`;
+}
+const cover=(w,i)=>w.img?`<img src="${w.img}" alt="${w.title} cover">`:art(i);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const rolesHtml=w=>`<div class="roles">${w.roles.map(r=>`<span>${esc(r)}</span>`).join("")}</div>`;
+const grid=document.getElementById("grid"),dlg=document.getElementById("dlg"),fl=document.getElementById("filters");
+let cur="All";
 
-            <div class="col-6 col-lg-3 mt-4 collapse show multi-collapse" id="album">
-                <div class="card element border-0">
-                  <div class="card-header"> 
-                    <div class="row">
-                        <div class="col-6">2019</div>
-                    </div> 
-                
-                    </div>
-                    <img class="card-img-top shadow-sm" src="images/tove_h_-_ep.jpeg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h5 class="card-title text-lg-start fw-bold mb-1">Tove H</h5>
-                        <h5 class="card-subtitle mb-2 text-body-secondary fst-italic">EP</h5>
-                        <span class="badge text-bg-primary"></span>
-                        <span class="badge text-bg-primary"></span>
-                        <span class="badge text-bg-success">Producing</span>
-                        <span class="badge text-bg-success">Mixing</span>
-                        <span class="badge text-bg-warning"></span>
-                        <span class="badge text-bg-warning"></span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-lg-3 mt-4 collapse show multi-collapse" id="album">
-                <div class="card element border-0">
-                  <div class="card-header"> 
-                    <div class="row">
-                        <div class="col-6">2019</div>
-                    </div> 
-                
-                    </div>
-                    <img class="card-img-top shadow-sm" src="images/wentus_blues_band_duke_robillard_-_too_much_mustard.jpeg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h5 class="card-title text-lg-start fw-bold mb-1">Wentus Blues Band feat. Duke Robillard</h5>
-                        <h5 class="card-subtitle mb-2 text-body-secondary fst-italic">Too Much Mustard!</h5>
-                        <span class="badge text-bg-primary">Drums</span>
-                        <span class="badge text-bg-primary"></span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-warning">Cover Layout</span>
-                        <span class="badge text-bg-warning"></span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-lg-3 mt-4 collapse show multi-collapse" id="single">
-                <div class="card element border-0">
-                  <div class="card-header"> 
-                    <div class="row">
-                        <div class="col-6">2019</div>
-                    </div> 
-                
-                    </div>
-                    <img class="card-img-top shadow-sm" src="images/michael_bleu_nalia_-_hidas_biisi.jpeg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h5 class="card-title text-lg-start fw-bold mb-1">Michael Bleu feat. Nalia</h5>
-                        <h5 class="card-subtitle mb-2 text-body-secondary fst-italic">Hidas biisi</h5>
-                        <span class="badge text-bg-primary">Drums</span>
-                        <span class="badge text-bg-primary"></span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-warning"></span>
-                        <span class="badge text-bg-warning"></span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-lg-6 mt-4 collapse show multi-collapse" id="video">
-                <div class="card element border-0">
-                  <div class="card-header"> 
-                    <div class="row">
-                        <div class="col-6">2019</div>
-                    </div> 
-                
-                    </div>
-                    <img class="card-img-top shadow-sm" src="images/fredrik_furu_-_det_som_alla_letar_efter.jpg" alt="Card image">
-                    <div class="card-body">
-                        <h5 class="card-title text-lg-start fw-bold mb-1">Fredrik Furu</h5>
-                        <h5 class="card-subtitle mb-2 text-body-secondary fst-italic">Det som alla letar efter</h5>
-                        <span class="badge text-bg-primary"></span>
-                        <span class="badge text-bg-primary"></span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-warning">Animation</span>
-                        <span class="badge text-bg-warning"></span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-lg-3 mt-4 collapse show multi-collapse" id="album">
-                <div class="card element border-0">
-                  <div class="card-header"> 
-                    <div class="row">
-                        <div class="col-6">2018</div>
-                    </div> 
-                
-                    </div>
-                    <img class="card-img-top shadow-sm" src="images/wentus_blues_band_-_yuletide.jpeg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h5 class="card-title text-lg-start fw-bold mb-1">Wentus Blues Band</h5>
-                        <h5 class="card-subtitle mb-2 text-body-secondary fst-italic">Yuletide</h5>
-                        <span class="badge text-bg-primary">Drums</span>
-                        <span class="badge text-bg-primary"></span>
-                        <span class="badge text-bg-success">Mixing</span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-warning"></span>
-                        <span class="badge text-bg-warning"></span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-lg-3 mt-4 collapse show multi-collapse" id="single">
-                <div class="card element border-0">
-                  <div class="card-header"> 
-                    <div class="row">
-                        <div class="col-6">2018</div>
-                    </div> 
-                
-                    </div>
-                    <img class="card-img-top shadow-sm" src="images/animor_-_somebody_loves_you.jpeg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h5 class="card-title text-lg-start fw-bold mb-1">Animor</h5>
-                        <h5 class="card-subtitle mb-2 text-body-secondary fst-italic">Somebody Loves You</h5>
-                        <span class="badge text-bg-primary">Drums</span>
-                        <span class="badge text-bg-primary">Bass</span>
-                        <span class="badge text-bg-primary">Philicorda</span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-warning"></span>
-                        <span class="badge text-bg-warning"></span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-lg-3 mt-4 collapse show multi-collapse" id="single">
-                <div class="card element border-0">
-                  <div class="card-header"> 
-                    <div class="row">
-                        <div class="col-6">2018</div>
-                    </div> 
-                
-                    </div>
-                    <img class="card-img-top shadow-sm" src="images/kepa_harkonen_-_spicy_tales_spacey_tones.jpeg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h5 class="card-title text-lg-start fw-bold mb-1">Kepa Härkönen</h5>
-                        <h5 class="card-subtitle mb-2 text-body-secondary fst-italic">Spicy Tales & Spacey Tones</h5>
-                        <span class="badge text-bg-primary">Drums</span>
-                        <span class="badge text-bg-primary"></span>
-                        <span class="badge text-bg-success">Mixing</span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-warning">Cover Layout</span>
-                        <span class="badge text-bg-warning">Cover Art</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-lg-3 mt-4 collapse show multi-collapse" id="album">
-                <div class="card element border-0">
-                  <div class="card-header"> 
-                    <div class="row">
-                        <div class="col-6">2018</div>
-                    </div> 
-                
-                    </div>
-                    <img class="card-img-top shadow-sm" src="images/wentus_blues_band_-_throwback.jpeg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h5 class="card-title text-lg-start fw-bold mb-1">Wentus Blues Band</h5>
-                        <h5 class="card-subtitle mb-2 text-body-secondary fst-italic">Throwback</h5>
-                        <span class="badge text-bg-primary">Drums</span>
-                        <span class="badge text-bg-primary"></span>
-                        <span class="badge text-bg-success">Mixing</span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-warning"></span>
-                        <span class="badge text-bg-warning"></span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-lg-3 mt-4 collapse show multi-collapse" id="single">
-                <div class="card element border-0">
-                  <div class="card-header"> 
-                    <div class="row">
-                        <div class="col-6">2018</div>
-                    </div> 
-                
-                    </div>
-                    <img class="card-img-top shadow-sm" src="images/sorry_babe_-_stupid_girl.jpeg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h5 class="card-title text-lg-start fw-bold mb-1">Sorry Babe</h5>
-                        <h5 class="card-subtitle mb-2 text-body-secondary fst-italic">Stupid Girl</h5>
-                        <span class="badge text-bg-primary">Drums</span>
-                        <span class="badge text-bg-primary"></span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-warning"></span>
-                        <span class="badge text-bg-warning"></span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-lg-6 mt-4 collapse show multi-collapse" id="video">
-                <div class="card element border-0">
-                  <div class="card-header"> 
-                    <div class="row">
-                        <div class="col-6">2018</div>
-                    </div> 
-                
-                    </div>
-                    <img class="card-img-top shadow-sm" src="images/fredrik_furu_-_dum_dum_dum.jpg" alt="Card image">
-                    <div class="card-body">
-                        <h5 class="card-title text-lg-start fw-bold mb-1">Fredrik Furu</h5>
-                        <h5 class="card-subtitle mb-2 text-body-secondary fst-italic">Dum dum dum</h5>
-                        <span class="badge text-bg-primary"></span>
-                        <span class="badge text-bg-primary"></span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-warning">Animation</span>
-                        <span class="badge text-bg-warning"></span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-lg-3 mt-4 collapse show multi-collapse" id="album">
-                <div class="card element border-0">
-                  <div class="card-header"> 
-                    <div class="row">
-                        <div class="col-6">2017</div>
-                    </div> 
-                
-                    </div>
-                    <img class="card-img-top shadow-sm" src="images/kinaret_-_himanka.jpeg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h5 class="card-title text-lg-start fw-bold mb-1">Kinaret</h5>
-                        <h5 class="card-subtitle mb-2 text-body-secondary fst-italic">Himanka</h5>
-                        <span class="badge text-bg-primary">Drums</span>
-                        <span class="badge text-bg-primary"></span>
-                        <span class="badge text-bg-success">Mixing</span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-warning"></span>
-                        <span class="badge text-bg-warning"></span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-lg-3 mt-4 collapse show multi-collapse" id="album">
-                <div class="card element border-0">
-                  <div class="card-header"> 
-                    <div class="row">
-                        <div class="col-6">2017</div>
-                    </div> 
-                
-                    </div>
-                    <img class="card-img-top shadow-sm" src="images/the_napkins_-_genuine.jpeg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h5 class="card-title text-lg-start fw-bold mb-1">The Napkins</h5>
-                        <h5 class="card-subtitle mb-2 text-body-secondary fst-italic">Genuine</h5>
-                        <span class="badge text-bg-primary">Drums</span>
-                        <span class="badge text-bg-primary"></span>
-                        <span class="badge text-bg-success">Mixing</span>
-                        <span class="badge text-bg-success">Producing</span>
-                        <span class="badge text-bg-warning">Cover Art</span>
-                        <span class="badge text-bg-warning">Cover Layout</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-lg-6 mt-4 collapse show multi-collapse" id="video">
-                <div class="card element border-0">
-                  <div class="card-header"> 
-                    <div class="row">
-                        <div class="col-6">2017</div>
-                    </div> 
-                
-                    </div>
-                    <img class="card-img-top shadow-sm" src="images/hilanders_-_en_ma_jaksaiskaan.jpg" alt="Card image">
-                    <div class="card-body">
-                        <h5 class="card-title text-lg-start fw-bold mb-1">Hilanders</h5>
-                        <h5 class="card-subtitle mb-2 text-body-secondary fst-italic">En mä jaksaiskaan pettyä enää</h5>
-                        <span class="badge text-bg-primary"></span>
-                        <span class="badge text-bg-primary"></span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-warning">Animation</span>
-                        <span class="badge text-bg-warning"></span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-lg-6 mt-4 collapse show multi-collapse" id="video">
-                <div class="card element border-0">
-                  <div class="card-header"> 
-                    <div class="row">
-                        <div class="col-6">2017</div>
-                    </div> 
-                
-                    </div>
-                    <img class="card-img-top shadow-sm" src="images/lysa_-_ribs.jpg" alt="Card image">
-                    <div class="card-body">
-                        <h5 class="card-title text-lg-start fw-bold mb-1">LYSA</h5>
-                        <h5 class="card-subtitle mb-2 text-body-secondary fst-italic">Ribs</h5>
-                        <span class="badge text-bg-primary">Drums</span>
-                        <span class="badge text-bg-primary"></span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-warning">Animation</span>
-                        <span class="badge text-bg-warning"></span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-lg-3 mt-4 collapse show multi-collapse" id="album">
-                <div class="card element border-0">
-                  <div class="card-header"> 
-                    <div class="row">
-                        <div class="col-6">2017</div>
-                    </div> 
-                
-                    </div>
-                    <img class="card-img-top shadow-sm" src="images/thoby_loth_-_skymningsdalen.jpeg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h5 class="card-title text-lg-start fw-bold mb-1">Thoby Loth</h5>
-                        <h5 class="card-subtitle mb-2 text-body-secondary fst-italic">Skymningsdalen</h5>
-                        <span class="badge text-bg-primary">Drums</span>
-                        <span class="badge text-bg-primary"></span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-warning"></span>
-                        <span class="badge text-bg-warning"></span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-lg-3 mt-4 collapse show multi-collapse" id="album">
-                <div class="card element border-0">
-                  <div class="card-header"> 
-                    <div class="row">
-                        <div class="col-6">2016</div>
-                    </div> 
-                
-                    </div>
-                    <img class="card-img-top shadow-sm" src="images/va_-_dylan_suomeksi.jpeg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h5 class="card-title text-lg-start fw-bold mb-1">Various Artists</h5>
-                        <h5 class="card-subtitle mb-2 text-body-secondary fst-italic">Dylan suomeksi</h5>
-                        <span class="badge text-bg-primary">Drums</span>
-                        <span class="badge text-bg-primary"></span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-warning"></span>
-                        <span class="badge text-bg-warning"></span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-lg-3 mt-4 collapse show multi-collapse" id="album">
-                <div class="card element border-0">
-                  <div class="card-header"> 
-                    <div class="row">
-                        <div class="col-6">2016</div>
-                    </div> 
-                
-                    </div>
-                    <img class="card-img-top shadow-sm" src="images/wentus_blues_band_-_lucky_strike_mama.jpeg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h5 class="card-title text-lg-start fw-bold mb-1">Wentus Blues Band</h5>
-                        <h5 class="card-subtitle mb-2 text-body-secondary fst-italic">Lucky Strike Mama</h5>
-                        <span class="badge text-bg-primary">Drums</span>
-                        <span class="badge text-bg-primary"></span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-warning"></span>
-                        <span class="badge text-bg-warning"></span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-lg-6 mt-4 collapse show multi-collapse" id="video">
-                <div class="card element border-0">
-                  <div class="card-header"> 
-                    <div class="row">
-                        <div class="col-6">2016</div>
-                    </div> 
-                
-                    </div>
-                    <img class="card-img-top shadow-sm" src="images/the_heartbeat_band_-_pills.jpg" alt="Card image">
-                    <div class="card-body">
-                        <h5 class="card-title text-lg-start fw-bold mb-1">The Heartbeat Band</h5>
-                        <h5 class="card-subtitle mb-2 text-body-secondary fst-italic">Pills</h5>
-                        <span class="badge text-bg-primary"></span>
-                        <span class="badge text-bg-primary"></span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-warning">Animation</span>
-                        <span class="badge text-bg-warning"></span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-lg-6 mt-4 collapse show multi-collapse" id="video">
-                <div class="card element border-0">
-                  <div class="card-header"> 
-                    <div class="row">
-                        <div class="col-6">2016</div>
-                    </div> 
-                
-                    </div>
-                    <img class="card-img-top shadow-sm" src="images/paleface_-_kuoleman_kauppiaat.jpg" alt="Card image">
-                    <div class="card-body">
-                        <h5 class="card-title text-lg-start fw-bold mb-1">Paleface / Wentus Blues Band</h5>
-                        <h5 class="card-subtitle mb-2 text-body-secondary fst-italic">Kuoleman kauppiaat</h5>
-                        <span class="badge text-bg-primary">Drums</span>
-                        <span class="badge text-bg-primary"></span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-warning">Animation</span>
-                        <span class="badge text-bg-warning"></span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-lg-6 mt-4 collapse show multi-collapse" id="video">
-                <div class="card element border-0">
-                  <div class="card-header"> 
-                    <div class="row">
-                        <div class="col-6">2015</div>
-                    </div> 
-                
-                    </div>
-                    <img class="card-img-top shadow-sm" src="images/manskensbonden_-_dopt_i_kyro_alv.jpg" alt="Card image">
-                    <div class="card-body">
-                        <h5 class="card-title text-lg-start fw-bold mb-1">Månskensbonden</h5>
-                        <h5 class="card-subtitle mb-2 text-body-secondary fst-italic">Döpt i Kyrö älv</h5>
-                        <span class="badge text-bg-primary">Drums</span>
-                        <span class="badge text-bg-primary"></span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-warning">Animation</span>
-                        <span class="badge text-bg-warning"></span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-lg-3 mt-4 collapse show multi-collapse" id="single">
-                <div class="card element border-0">
-                  <div class="card-header"> 
-                    <div class="row">
-                        <div class="col-6">2015</div>
-                    </div> 
-                
-                    </div>
-                    <img class="card-img-top shadow-sm" src="images/manskensbonden_-_dopt_i_kyro_alv_single.jpeg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h5 class="card-title text-lg-start fw-bold mb-1">Månskensbonden</h5>
-                        <h5 class="card-subtitle mb-2 text-body-secondary fst-italic">Döpt i Kyrö älv</h5>
-                        <span class="badge text-bg-primary">Drums</span>
-                        <span class="badge text-bg-primary"></span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-warning"></span>
-                        <span class="badge text-bg-warning"></span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-lg-6 mt-4 collapse show multi-collapse" id="video">
-                <div class="card element border-0">
-                  <div class="card-header"> 
-                    <div class="row">
-                        <div class="col-6">2015</div>
-                    </div> 
-                
-                    </div>
-                    <img class="card-img-top shadow-sm" src="images/burn_the_witches_-_burn_the_witches.jpg" alt="Card image">
-                    <div class="card-body">
-                        <h5 class="card-title text-lg-start fw-bold mb-1">Burn the Witches</h5>
-                        <h5 class="card-subtitle mb-2 text-body-secondary fst-italic">Burn the Witches</h5>
-                        <span class="badge text-bg-primary">Drums</span>
-                        <span class="badge text-bg-primary"></span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-warning">Animation</span>
-                        <span class="badge text-bg-warning"></span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-lg-3 mt-4 collapse show multi-collapse" id="album">
-                <div class="card element border-0">
-                  <div class="card-header"> 
-                    <div class="row">
-                        <div class="col-6">2012</div>
-                    </div> 
-                
-                    </div>
-                    <img class="card-img-top shadow-sm" src="images/stilla_-_hela_havet_stormar.jpg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h5 class="card-title text-lg-start fw-bold mb-1">Stilla</h5>
-                        <h5 class="card-subtitle mb-2 text-body-secondary fst-italic">Hela havet stormar</h5>
-                        <span class="badge text-bg-primary">Drums</span>
-                        <span class="badge text-bg-primary">Keyboards</span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-warning">Songwriting</span>
-                        <span class="badge text-bg-warning"></span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-lg-3 mt-4 collapse show multi-collapse" id="album">
-                <div class="card element border-0">
-                  <div class="card-header"> 
-                    <div class="row">
-                        <div class="col-6">2012</div>
-                    </div> 
-                
-                    </div>
-                    <img class="card-img-top shadow-sm" src="images/thoby_loth_-_cauldron_of_life.jpg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h5 class="card-title text-lg-start fw-bold mb-1">Thoby Loth</h5>
-                        <h5 class="card-subtitle mb-2 text-body-secondary fst-italic">Cauldron of Life</h5>
-                        <span class="badge text-bg-primary">Drums</span>
-                        <span class="badge text-bg-primary"></span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-warning"></span>
-                        <span class="badge text-bg-warning"></span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-lg-3 mt-4 collapse show multi-collapse" id="album">
-                <div class="card element border-0">
-                  <div class="card-header"> 
-                    <div class="row">
-                        <div class="col-6">2011</div>
-                    </div> 
-                
-                    </div>
-                    <img class="card-img-top shadow-sm" src="images/stilla_-_stilla.jpg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h5 class="card-title text-lg-start fw-bold mb-1">Stilla</h5>
-                        <h5 class="card-subtitle mb-2 text-body-secondary fst-italic">Stilla</h5>
-                        <span class="badge text-bg-primary">Drums</span>
-                        <span class="badge text-bg-primary"></span>
-                        <span class="badge text-bg-success">Songwriting</span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-warning">Cover Layout</span>
-                        <span class="badge text-bg-warning"></span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-lg-3 mt-4 collapse show multi-collapse" id="album">
-                <div class="card element border-0">
-                  <div class="card-header"> 
-                    <div class="row">
-                        <div class="col-6">2009</div>
-                    </div> 
-                
-                    </div>
-                    <img class="card-img-top shadow-sm" src="images/thoby_loth_-_lagereldarnas_tid.jpg" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h5 class="card-title text-lg-start fw-bold mb-1">Thoby Loth</h5>
-                        <h5 class="card-subtitle mb-2 text-body-secondary fst-italic">Lägereldarnas tid</h5>
-                        <span class="badge text-bg-primary">Drums</span>
-                        <span class="badge text-bg-primary"></span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-warning"></span>
-                        <span class="badge text-bg-warning"></span>
-                    </div>
-                </div>
-            </div>
-
-            <!--CARDS END-->
-
-
-<!--
-
-            ALBUM CARD
-            <div class="col-6 col-lg-3 mt-4 collapse show multi-collapse" id="album">
-                <div class="card element border-0">
-                  <div class="card-header"> 
-                    <div class="row">
-                        <div class="col-6">Year</div>
-                    </div> 
-                
-                    </div>
-                    <img class="card-img-top shadow-sm" src="https://placehold.co/1000x1000" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h5 class="card-title text-lg-start fw-bold mb-1">Album Artist</h5>
-                        <h5 class="card-subtitle mb-2 text-body-secondary fst-italic">Album Name</h5>
-                        <span class="badge text-bg-primary">Instruments</span>
-                        <span class="badge text-bg-primary"></span>
-                        <span class="badge text-bg-success">Engineering</span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-warning">Graphics</span>
-                        <span class="badge text-bg-warning"></span>
-                    </div>
-                </div>
-            </div>
-
-            
-            
-            END of ALBUM CARD
-
-            SINGLE CARD
-            <div class="col-6 col-lg-3 mt-4 collapse show multi-collapse" id="single">
-                <div class="card element border-0">
-                  <div class="card-header"> 
-                    <div class="row">
-                        <div class="col-6">Year</div>
-                    </div> 
-                
-                    </div>
-                    <img class="card-img-top shadow-sm" src="https://placehold.co/1000x1000" alt="Card image" style="width:100%">
-                    <div class="card-body">
-                        <h5 class="card-title text-lg-start fw-bold mb-1">Single Artist</h5>
-                        <h5 class="card-subtitle mb-2 text-body-secondary fst-italic">Single Name</h5>
-                        <span class="badge text-bg-primary">Instruments</span>
-                        <span class="badge text-bg-primary"></span>
-                        <span class="badge text-bg-success">Engineering</span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-warning">Graphics</span>
-                        <span class="badge text-bg-warning"></span>
-                    </div>
-                </div>
-            </div>
-            END of SINGLE CARD
-
-            VIDEO CARD
-            <div class="col-12 col-lg-6 mt-4 collapse show multi-collapse" id="video">
-                <div class="card element border-0">
-                  <div class="card-header"> 
-                    <div class="row">
-                        <div class="col-6">Year</div>
-                    </div> 
-                
-                    </div>
-                    <img class="card-img-top shadow-sm" src="https://placehold.co/1920x1080" alt="Card image">
-                    <div class="card-body">
-                        <h5 class="card-title text-lg-start fw-bold mb-1">Video Artist</h5>
-                        <h5 class="card-subtitle mb-2 text-body-secondary fst-italic">Video Name</h5>
-                        <span class="badge text-bg-primary">Instruments</span>
-                        <span class="badge text-bg-primary"></span>
-                        <span class="badge text-bg-success">Engineering</span>
-                        <span class="badge text-bg-success"></span>
-                        <span class="badge text-bg-warning">Graphics</span>
-                        <span class="badge text-bg-warning"></span>
-                    </div>
-                </div>
-            </div>
-            END of VIDEOCARD
-
-        -->
-
-            
-      
-
-
-
-
-
-        </div>
-        </div>
-        </section>
-      <!--PORTFOLIO END-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  </body>
+function render(){
+ grid.innerHTML=WORK.map((w,i)=>({w,i})).filter(o=>cur=="All"||o.w.roles.includes(cur)).map(({w,i})=>
+ `<button class="item" data-i="${i}" aria-label="${esc(w.title)} by ${esc(w.artist)}, open details"><div class="cover">${cover(w,i)}</div>
+ <div class="meta"><div><div class="t">${esc(w.title)}</div><div class="a">${esc(w.artist)}</div></div><div class="y">${w.year}</div></div>${rolesHtml(w)}</button>`).join("");
+}
+const all=["All",...new Set(WORK.flatMap(w=>w.roles))];
+fl.innerHTML=all.map(r=>`<button aria-pressed="${r==cur}">${esc(r)}</button>`).join("");
+const sync=()=>[...fl.children].forEach(c=>{
+  if(c.getAttribute("aria-pressed")=="true"){if(!c.style.getPropertyValue("--active"))c.style.setProperty("--active",c.style.getPropertyValue("--hover")||rnd())}
+  else c.style.removeProperty("--active");
+});
+sync();
+fl.onclick=e=>{const b=e.target.closest("button");if(!b)return;cur=b.textContent;[...fl.children].forEach(c=>c.setAttribute("aria-pressed",c===b));sync();render()};
+function setRole(r){
+  cur=r;
+  [...fl.children].forEach(c=>c.setAttribute("aria-pressed",c.textContent===r));
+  sync();render();
+}
+document.querySelectorAll(".role-link").forEach(a=>
+  a.addEventListener("click",()=>setRole(a.dataset.role)));
+grid.onclick=e=>{
+ const b=e.target.closest(".item");if(!b)return;const i=+b.dataset.i,w=WORK[i];
+ dlg.innerHTML=`<div class="dl"><div class="cover">${cover(w,i)}</div><div class="info"><button class="x" aria-label="Close">Close</button>
+ <div class="t">${esc(w.title)}</div><div class="a">${esc(w.artist)}, ${w.year}</div>${rolesHtml(w)}
+ ${w.note?`<p class="note">${esc(w.note)}</p>`:""}
+${w.playlist?`<a class="btn" href="${esc(w.playlist)}" target="_blank" rel="noopener">${esc(w.btnLabel||"Listen to the record!")}</a>`:""}</div></div>`;
+ dlg.showModal();
+};
+dlg.onclick=e=>{if(e.target===dlg||e.target.closest(".x"))dlg.close()};
+if(PORTRAIT)document.getElementById("portrait").innerHTML=`<img src="${PORTRAIT}" alt="Portrait">`;
+render();
+</script>
+</body>
 </html>
