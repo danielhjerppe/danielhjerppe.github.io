@@ -63,6 +63,11 @@ em{font-style:italic}
 .roles{display:block;margin-top:6px;font-size:13px;line-height:1.5;color:var(--accent)}
 .roles span:not(:last-child)::after{content:"/";margin:0 .55em;color:var(--mute);opacity:.5}
 .roles span{white-space:nowrap}
+.embed{display:block;width:100%;border:0;border-radius:10px;background:transparent;margin-top:6px;color-scheme:normal}
+.dl .cover{position:relative}
+.dl .cover img,.dl .cover svg{position:absolute;inset:0}
+.dl .info{height:0;min-height:100%;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin}
+@media (max-width:860px){.dl .info{height:auto;min-height:0;overflow:visible}}
 footer{border-top:1px solid var(--line);padding:22px 0 40px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:14px;color:var(--mute)}
 dialog{border:0;padding:0;background:var(--bg);color:var(--ink);width:min(900px,94vw);max-height:92vh;overflow:auto;margin:auto;border-radius:16px}
 dialog::backdrop{background:rgba(0,0,0,.6);backdrop-filter:blur(6px)}
@@ -85,7 +90,7 @@ dialog[open]{animation:pop .35s ease}
 </style>
 </head>
 <body>
-<header><div class="wrap"><a class="lname brand" href="#top">Daniel Hjerppe</a><nav style="display:flex;gap:22px"><a href="#work">Work</a><a href="#">Photography</a><a class="mail" href="#">Contact</a><button class="theme" type="button" aria-label="Switch colour theme"></button></nav></div></header>
+<header><div class="wrap"><a class="lname brand" href="#top">Daniel Hjerppe</a><nav style="display:flex;gap:22px"><a href="#work">Work</a><a target="_blank" href="https://www.flickr.com/photos/danielhjerppe/">Photography</a><a class="mail" href="#">Contact</a><button class="theme" type="button" aria-label="Switch colour theme"></button></nav></div></header>
 <div class="wrap">
 <!-- <h1 id="top">Daniel Hjerppe</h1> -->
 
@@ -95,7 +100,7 @@ dialog[open]{animation:pop .35s ease}
     <p class="sub">Based in Vaasa, Finland, from where I keep time with <a class="l" target="_blank" href="https://www.wentusbluesband.com">Wentus Blues Band</a> and Kuusikoski to name a few.</p>
     <div class="links"><a class="l mail" data-show href="#"></a><a class="l" target="_blank" href="https://www.linkedin.com/in/danielhjerppe/">LinkedIn</a><a class="l" target="_blank" href="http://www.youtube.com/@DanielHjerppe">YouTube</a></div>
   </div>
-  <div class="portrait" id="portrait">Add your photo</div>
+  <div class="portrait" id="portrait">A photo of me</div>
 </section>
 
 <section id="work">
@@ -114,12 +119,48 @@ dialog[open]{animation:pop .35s ease}
    playlist: link to Spotify / Bandcamp / YouTube etc. (leave "" to hide the button)
    img: optional cover image as a data: URI. Without it, a generated placeholder is shown. */
 const WORK=[
- {artist:"Kuusikoski feat. SIRÉN",title:"Hall of Fame",year:2026,roles:["Drums","Mixing","Graphic Design"],playlist:"",img:"images/kuusikoski_halloffame.jpg", btnLabel:"",note:"Recorded live at Midas Studios, Replot in 2025. On this song we have the wonderful <b>Josefin Sirén</b> sharing vocal duties with Marcus. "},
- {artist:"Wentusfest 2026",title:"Logo & T-shirts",year:2026,roles:["Graphic Design"],playlist:"",img:"images/wentusfest_tshirt.png", btnLabel:"",note:""},
- {artist:"Zacharias Holmkvist Quartet",title:"Up Ahead",year:2024,roles:["Recording","Mixing"],playlist:"",img:"images/zacharias_up_ahead.jpeg", btnLabel:"",note:""},
- {artist:"Ina Forsman",title:"All There Is",year:2022,roles:["Drums"],playlist:"#",img:"images/ina_forsman_-_all_there_is.jpeg",note:"Produced by my old friend Michael Bleu. It was tracked on a rainy afternoon at his studio in Helsinki."},
- {artist:"Pepe Deluxé",title:"22nd Century Dandy",year:2021,roles:["Drums"],playlist:"#",img:"images/pepe_deluxe_-_phantom_cabinet_vol_1.jpeg", note:"I've always been a fan of Pepe Deluxé. It was a real honour to work with them on a few songs."},
- {artist:"Animor",title:"Wild Dog",year:2020,roles:["Drums","Production"],playlist:"",img:"images/animor_-_wild_dog.jpeg",note:"This track is maybe the one I'm the most proud of. I play almost every instrument on this track. Really dig the vibe and Animor's vocals on this one."},
+ {artist:"Kuusikoski feat. SIRÉN",
+ title:"Hall of Fame",
+ year:2026,
+ roles:["Drums","Mixing"],
+ playlist:"",
+ img:"images/kuusikoski_halloffame.jpg", 
+ btnLabel:"",
+ embed:"https://embed.music.apple.com/fi/album/hall-of-fame-feat-sir%C3%A9n/6801186753?i=6801186756",
+ note:"Recorded live at <b>Midas Studios</b>, Replot 31.1.-2.2.2025. The wonderful <b>Josefin Sirén</b> shares vocal duties with Marcus on this song.<br>The layout and photo is by me."},
+ {artist:"Wentusfest 2026",
+ title:"Logo & T-shirts",
+ year:2026,
+ roles:["Graphic Design"],
+ playlist:"",
+ img:"images/wentusfest_blue.jpg", 
+ btnLabel:"",
+ note:"A logo for Wentusfest, a festival celebrating 40 years of Wentus Blues Band. "},
+
+ {artist:"Zacharias Holmkvist Quartet",
+ title:"Up Ahead",
+ year:2024,
+ roles:["Recording","Mixing"],
+ playlist:"",
+ img:"images/zacharias_up_ahead.jpeg", 
+ btnLabel:"",
+ embed:"https://open.spotify.com/embed/album/084fGHqks65BCxYvjP54A6?utm_source=generator&si=f327b426f4424d4f",
+ note:"Recorded live at <b>Midas Studios</b>, Replot 16.-17.3.2024. <br>Stefan Brokvist, drs. Zacharias Holmkvist, dbl bass. Mathias Sandberg, guit and Joonas Rintala, sax."},
+
+ {artist:"Ina Forsman",
+ title:"All There Is",
+ year:2022,roles:["Drums"],
+ playlist:"#",
+ img:"images/ina_forsman_-_all_there_is.jpeg",
+ note:"Produced by my old friend Michael Bleu. It was tracked on a rainy afternoon at his studio in Helsinki 7.-8.8.2021"},
+
+ {artist:"Pepe Deluxé",
+ title:"22nd Century Dandy",
+ year:2021,roles:["Drums"],
+ playlist:"#",
+ img:"images/pepe_deluxe_-_phantom_cabinet_vol_1.jpeg", 
+ note:"I've always been a huge fan of Pepe Deluxé, so it was a real honour to work with them on a few songs. The drums to this and a few other songs were recorded at my old studio <b>Vasklot Ljudservering</b> 27.8.2018."},
+ {artist:"Animor",title:"Wild Dog",year:2020,roles:["Drums","Production"],playlist:"",img:"images/animor_-_wild_dog.jpeg",note:"This track is maybe the one I'm the most proud of. I play more or less every instrument on this track including Philicorda. Really dig the dark vibe and Animor's vocals on this one.<br>Recorded at my old studio <b>Vasklot Ljudservering</b> in September 2018."},
  {artist:"Opus Symbiosis",title:"Fata Morgana",year:2020,roles:["Drums","Production","Recording","Mixing","Graphic Design"],playlist:"#",img:"images/opus_symbiosis_-_fata_morgana.jpeg"},
  {artist:"Michael Bleu",title:"Voodoo",year:2020,roles:["Drums"],playlist:"#",img:"images/michael_bleu_-_voodoo.jpeg"},
  {artist:"Kinaret",title:"Hahmo",year:2020,roles:["Drums","Mixing","Production","Recording","Graphic Design"],playlist:"",img:"images/kinaret_-_hahmo.jpeg"},
@@ -158,7 +199,7 @@ const MAIL_USER="hello",MAIL_DOMAIN="danielhjerppe.com";
 const root=document.documentElement,tb=document.querySelector(".theme"),mq=matchMedia("(prefers-color-scheme: dark)");
 const now=()=>root.dataset.theme||(mq.matches?"dark":"light");
 const label = () => {
-  tb.textContent = now() === "dark" ? "\u2600" : "\u263E";
+  tb.textContent = now() === "dark" ? "Light" : "Dark";
 };
 tb.onclick=()=>{const n=now()=="dark"?"light":"dark";root.dataset.theme=n;try{localStorage.setItem("theme",n)}catch(e){}label()};
 mq.onchange=label;label();
@@ -225,10 +266,12 @@ grid.onclick=e=>{
  dlg.innerHTML=`<div class="dl"><div class="cover">${cover(w,i)}</div><div class="info"><button class="x" aria-label="Close">Close</button>
  <div class="t">${esc(w.title)}</div><div class="a">${esc(w.artist)}, ${w.year}</div>${rolesHtml(w)}
  ${w.note?`<p class="note">${w.note}</p>`:""}
+${w.embed?`<iframe class="embed" title="Player: ${esc(w.title)}" allow="autoplay *; encrypted-media *;" loading="lazy" height="${w.embedH||175}" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="${esc(w.embed)}"></iframe>`:""}
 ${w.playlist?`<a class="btn" href="${esc(w.playlist)}" target="_blank" rel="noopener">${esc(w.btnLabel||"Listen to the record!")}</a>`:""}</div></div>`;
  dlg.showModal();
 };
 dlg.onclick=e=>{if(e.target===dlg||e.target.closest(".x"))dlg.close()};
+dlg.addEventListener("close",()=>{dlg.innerHTML=""}); /* stops any playing embed */
 if(PORTRAIT)document.getElementById("portrait").innerHTML=`<img src="${PORTRAIT}" alt="Portrait">`;
 render();
 </script>
