@@ -63,7 +63,6 @@ em{font-style:italic}
 .roles{display:block;margin-top:6px;font-size:13px;line-height:1.5;color:var(--accent)}
 .roles span:not(:last-child)::after{content:"/";margin:0 .55em;color:var(--mute);opacity:.5}
 .roles span{white-space:nowrap}
-.embed{display:block;width:100%;border:0;border-radius:10px;background:transparent;margin-top:6px;color-scheme:normal}
 footer{border-top:1px solid var(--line);padding:22px 0 40px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:14px;color:var(--mute)}
 dialog{border:0;padding:0;background:var(--bg);color:var(--ink);width:min(900px,94vw);max-height:92vh;overflow:auto;margin:auto;border-radius:16px}
 dialog::backdrop{background:rgba(0,0,0,.6);backdrop-filter:blur(6px)}
@@ -113,11 +112,9 @@ dialog[open]{animation:pop .35s ease}
 /* ---- EDIT YOUR WORK HERE ----
    roles: any of "Drums", "Production", "Mixing" (or add your own, e.g. "Mastering")
    playlist: link to Spotify / Bandcamp / YouTube etc. (leave "" to hide the button)
-   img: optional cover image as a data: URI. Without it, a generated placeholder is shown.
-   embed: to embed players from Apple Music or YouTube
-   embedH:450 to make room for a full album player */
+   img: optional cover image as a data: URI. Without it, a generated placeholder is shown. */
 const WORK=[
- {artist:"Kuusikoski feat. SIRÉN",title:"Hall of Fame",year:2026,roles:["Drums","Mixing","Graphic Design"],playlist:"",img:"images/kuusikoski_halloffame.jpg", btnLabel:"",embed:"https://embed.music.apple.com/fi/album/hall-of-fame-feat-sir%C3%A9n/6801186753?i=6801186756",note:"Recorded live at Midas Studios, Replot in 2025. On this song we have the wonderful <b>Josefin Sirén</b> sharing vocal duties with Marcus."},
+ {artist:"Kuusikoski feat. SIRÉN",title:"Hall of Fame",year:2026,roles:["Drums","Mixing","Graphic Design"],playlist:"",img:"images/kuusikoski_halloffame.jpg", btnLabel:"",note:"Recorded live at Midas Studios, Replot in 2025. On this song we have the wonderful <b>Josefin Sirén</b> sharing vocal duties with Marcus. "},
  {artist:"Wentusfest 2026",title:"Logo & T-shirts",year:2026,roles:["Graphic Design"],playlist:"",img:"images/wentusfest_tshirt.png", btnLabel:"",note:""},
  {artist:"Zacharias Holmkvist Quartet",title:"Up Ahead",year:2024,roles:["Recording","Mixing"],playlist:"",img:"images/zacharias_up_ahead.jpeg", btnLabel:"",note:""},
  {artist:"Ina Forsman",title:"All There Is",year:2022,roles:["Drums"],playlist:"#",img:"images/ina_forsman_-_all_there_is.jpeg",note:"Produced by my old friend Michael Bleu. It was tracked on a rainy afternoon at his studio in Helsinki."},
@@ -228,12 +225,10 @@ grid.onclick=e=>{
  dlg.innerHTML=`<div class="dl"><div class="cover">${cover(w,i)}</div><div class="info"><button class="x" aria-label="Close">Close</button>
  <div class="t">${esc(w.title)}</div><div class="a">${esc(w.artist)}, ${w.year}</div>${rolesHtml(w)}
  ${w.note?`<p class="note">${w.note}</p>`:""}
-${w.embed?`<iframe class="embed" title="Player: ${esc(w.title)}" allow="autoplay *; encrypted-media *;" loading="lazy" height="${w.embedH||175}" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="${esc(w.embed)}"></iframe>`:""}
 ${w.playlist?`<a class="btn" href="${esc(w.playlist)}" target="_blank" rel="noopener">${esc(w.btnLabel||"Listen to the record!")}</a>`:""}</div></div>`;
  dlg.showModal();
 };
 dlg.onclick=e=>{if(e.target===dlg||e.target.closest(".x"))dlg.close()};
-dlg.addEventListener("close",()=>{dlg.innerHTML=""}); /* stops any playing embed */
 if(PORTRAIT)document.getElementById("portrait").innerHTML=`<img src="${PORTRAIT}" alt="Portrait">`;
 render();
 </script>
