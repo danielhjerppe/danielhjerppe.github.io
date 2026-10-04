@@ -55,8 +55,8 @@ body{-webkit-text-size-adjust:100%}
 .cover{aspect-ratio:1;overflow:hidden;background:var(--line);border-radius:10px}
 .cover svg,.cover img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
 .item:hover .cover svg,.item:hover .cover img{transform:scale(1.03)}
-.item.fav .cover{--glow:var(--accent);box-shadow:0 0 30px -6px var(--glow),0 0 0 1px color-mix(in srgb,var(--glow) 70%,transparent);animation:glow 3s ease-in-out infinite}
-@keyframes glow{50%{box-shadow:0 0 40px -2px var(--glow),0 0 0 1px color-mix(in srgb,var(--glow) 50%,transparent)}}
+.item.fav .cover{--glow:var(--accent);box-shadow:0 0 24px -6px var(--glow),0 0 0 1px color-mix(in srgb,var(--glow) 70%,transparent);animation:glow 3s ease-in-out infinite;transform: rotate(-3deg);}
+@keyframes glow{50%{box-shadow:0 0 40px -2px var(--glow),0 0 0 1px color-mix(in srgb,var(--glow) 90%,transparent)}}
 .meta{display:flex;justify-content:space-between;gap:12px;margin-top:14px;align-items:baseline}
 .t{font-family:"Newsreader",Georgia,serif;font-size:21px;line-height:1.2}
 em{font-style:italic}
@@ -92,7 +92,7 @@ dialog[open]{animation:pop .35s ease}
 </style>
 </head>
 <body>
-<header><div class="wrap"><a class="lname brand" href="#top">Daniel Hjerppe</a><nav style="display:flex;gap:22px"><a href="#work">Work</a><a target="_blank" href="https://www.flickr.com/photos/danielhjerppe/">Photography</a><a class="mail" href="#">Contact</a><button class="theme" type="button" aria-label="Switch colour theme"></button></nav></div></header>
+<header><div class="wrap"><a class="lname brand" href="#top">Daniel Hjerppe.</a><nav style="display:flex;gap:22px"><a href="#work">Work</a><a target="_blank" href="https://www.flickr.com/photos/danielhjerppe/">Photography</a><a class="mail" href="#">Contact</a><button class="theme" type="button" aria-label="Switch colour theme"></button></nav></div></header>
 <div class="wrap">
 <!-- <h1 id="top">Daniel Hjerppe</h1> -->
 
@@ -249,7 +249,8 @@ const WORK=[
  btnLabel:"",
  img:"images/fredrik_furu_-_det_som_alla_letar_efter.jpg",
  embed:"https://www.youtube.com/embed/QLkS7aItH7M?si=h5Bwbq7TbR3AWaQG&amp;controls=0",
- note:"My second music video for Fredrik. Made in Blender."},
+ embedH:450,
+ note:""},
 
  {artist:"Wentus Blues Band",
  title:"Yuletide",
@@ -331,6 +332,8 @@ const WORK=[
  playlist:"",
  img:"images/hilanders_-_en_ma_jaksaiskaan.jpg", 
  btnLabel:"",
+ embedH:450,
+ embed:"https://www.youtube.com/embed/IzzLJ-N6mus?si=jip1JwUJlpM_lCwr",
  note:""},
 
  {artist:"LYSA",
@@ -340,7 +343,8 @@ const WORK=[
  playlist:"",
  img:"images/lysa_-_ribs.jpg", 
  btnLabel:"",
- note:""},
+ embed:"https://www.youtube.com/embed/u3JryO-7pTE?si=SVoXyncVvhpHptbf",
+ note:"A crazy animation on this one, done on an oscilloscope by feeding it XY audio signals. Even crazier drumming."},
 
  {artist:"Thoby Loth",
  title:"Skymningsdalen",
@@ -358,7 +362,7 @@ const WORK=[
  playlist:"",
  img:"images/va_-_dylan_suomeksi.jpeg", 
  btnLabel:"",
- note:""},
+ note:"This was recorded at the old E-studio in Helsinki. It was tracked live in one week with all the artists showing up to do their tracks. Great memories of this one."},
 
  {artist:"Wentus Blues Band",
  title:"Lucky Strike Mama",
@@ -366,7 +370,7 @@ const WORK=[
  playlist:"",
  img:"images/wentus_blues_band_-_lucky_strike_mama.jpeg", 
  btnLabel:"",
- note:""},
+ note:"This is my first album with Wentus Blues Band after becoming their new drummer. Recorded at Toni Leino's Suprovox studio in Karkkila straight to tape."},
 
  {artist:"The Heartbeat Band",
  title:"Pills",
